@@ -7,7 +7,7 @@ const Header = () => {
       <section className='header--background--black'>
         <img src={logo} alt='SmartFit Logo' className='header__logo' />
       </section>
-      <section className='header__container'>
+      <section className='main__container'>
         <h1 className='header__title'>reabertura smart fit</h1>
         <p className='header__description'>
           O horário de funcionamento das nossas unidades stá seguindo os

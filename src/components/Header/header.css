@@ -9,11 +9,6 @@
   width: 200px;
 }
 
-.header__container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 .header__title {
   font-size: 3rem;
   text-transform: uppercase;
