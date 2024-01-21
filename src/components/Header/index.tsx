@@ -12,7 +12,7 @@ const Header = () => {
         <p className='header__description'>
           O horário de funcionamento das nossas unidades stá seguindo os
           decretos de cada município. Por isso, confira aqui e a sua unidade
-          está aberta e s medidas de segurança que estamos seguindo.
+          está aberta e as medidas de segurança que estamos seguindo.
         </p>
       </section>
     </header>
