@@ -18,3 +18,7 @@
   width: 80%;
   margin: 0 auto;
 }
+
+input {
+  margin-right: 6px;
+}
