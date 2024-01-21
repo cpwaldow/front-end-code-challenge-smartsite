@@ -17,7 +17,7 @@ const Form = () => {
         ))}
         <section className='form__container__result'>
           <label>
-            <input type='checkbox' name='' id='' />
+            <input type='checkbox' name='close-units' id='close-units' />
             Exibir unidades fechadas
           </label>
           <p>
