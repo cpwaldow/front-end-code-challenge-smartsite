@@ -3,8 +3,6 @@ import outfit from '../utils/outfit';
 import OutfitItems from '../OutfitItems';
 
 const IconsLegend = () => {
-  console.log(outfit);
-
   return (
     <section className='icons-legend__container'>
       {outfit.map((item) => (
