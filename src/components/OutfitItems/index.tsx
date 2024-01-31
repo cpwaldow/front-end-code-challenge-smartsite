@@ -17,7 +17,11 @@ const OutfitItems = ({ info }: PropsType) => {
       <div className='outfit-items__infos'>
         {info.imgs.map((img) => (
           <section key={img.info}>
-            <img src={img.src} className='outfit-items__imgs' />
+            <img
+              src={img.src}
+              className='outfit-items__imgs'
+              alt={`${info.item} - ${img.info}`}
+            />
             <p>{img.info}</p>
           </section>
         ))}
