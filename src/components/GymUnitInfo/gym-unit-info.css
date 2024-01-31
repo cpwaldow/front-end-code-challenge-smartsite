@@ -27,3 +27,22 @@
 .gym-unit-info__location {
   color: var(--dark-grey);
 }
+
+.gym-unit-info__options {
+  border-top: 1px solid var(--dark-grey);
+  margin-top: 1rem;
+}
+
+.gym-unit-info__schedules {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.gym-unit-info__schedules__weekdays {
+  flex: 50%;
+  margin-bottom: 1rem;
+  & h4 {
+    font-size: 1.3rem;
+  }
+}
