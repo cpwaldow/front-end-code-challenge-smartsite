@@ -1,14 +1,14 @@
 import { LocationsApiType } from '../../types';
 import './gym-unit-info.css';
-import requiredMask from '../assets/required-mask.png';
-import recommendedMask from '../assets/recommended-mask.png';
-import requiredTowel from '../assets/required-towel.png';
-import recommendedTowel from '../assets/recommended-towel.png';
-import parcialFountain from '../assets/partial-fountain.png';
-import forbiddenFountain from '../assets/forbidden-fountain.png';
-import requiredLockerroom from '../assets/required-lockerroom.png';
-import partialLockerroom from '../assets/partial-lockerroom.png';
-import forbiddenLockerroom from '../assets/forbidden-lockerroom.png';
+// import requiredMask from '../assets/required-mask.png';
+// import recommendedMask from '../assets/recommended-mask.png';
+// import requiredTowel from '../assets/required-towel.png';
+// import recommendedTowel from '../assets/recommended-towel.png';
+// import parcialFountain from '../assets/partial-fountain.png';
+// import forbiddenFountain from '../assets/forbidden-fountain.png';
+// import requiredLockerroom from '../assets/required-lockerroom.png';
+// import partialLockerroom from '../assets/partial-lockerroom.png';
+// import forbiddenLockerroom from '../assets/forbidden-lockerroom.png';
 
 type GymUnitInfoProps = {
   info: LocationsApiType;
