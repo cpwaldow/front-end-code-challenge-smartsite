@@ -1,0 +1,6 @@
+.gym-units__container {
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}

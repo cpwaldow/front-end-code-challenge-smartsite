@@ -1,4 +1,4 @@
-type LocationsApiType = {
+export type LocationsApiType = {
   id: number;
   title: string;
   content: string;
@@ -13,12 +13,10 @@ type LocationsApiType = {
   }[];
 };
 
-type GymAPIType = {
+export type GymAPIType = {
   current_country_id: number;
   wp_total: number;
   total: number;
   success: boolean;
   locations: LocationsApiType;
 };
-
-export default GymAPIType;

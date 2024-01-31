@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import GymContext from './GymContext';
-import GymAPIType from '../types';
+import { GymAPIType } from '../types';
 import fetchAPI from '../services/fetch';
 
 type GymProviderPropsType = {

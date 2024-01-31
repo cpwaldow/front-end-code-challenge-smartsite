@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import GymContext from '../../context/GymContext';
-import GymAPIType from '../../types';
+import { GymAPIType } from '../../types';
+import './gym-units.css';
+import GymUnitInfo from '../GymUnitInfo';
 
 type GymUnitsType = {
   gyms?: GymAPIType;
@@ -13,11 +15,9 @@ const GymUnits = () => {
   console.log(locations);
   const initialGyms = [locations[0], locations[1], locations[2]];
   return (
-    <div>
+    <div className='gym-units__container'>
       {initialGyms.map((item) => (
-        <section key={item.id}>
-          <p>{item.opened ? 'Aberto' : 'Fechado'}</p>
-        </section>
+        <GymUnitInfo key={item.id} info={item} />
       ))}
     </div>
   );

@@ -1,0 +1,29 @@
+.gym-unit-info__container {
+  background-color: var(--light-grey);
+  border-radius: 6px;
+  padding: 1rem;
+  min-width: 30%;
+}
+
+.gym-unit-info__isOpen {
+  color: var(--green);
+}
+
+.gym-unit-info__isClosed {
+  color: var(--red);
+}
+
+.gym-unit-info__isOpen , .gym-unit-info__isClosed {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.gym-unit-info__title {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1rem;
+}
+
+.gym-unit-info__location {
+  color: var(--dark-grey);
+}
