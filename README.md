@@ -11,7 +11,7 @@ Certifique-se de ter o seguinte instalado antes de começar:
 
 ## Instalação
 
-1. **Clone o repositório:**
+**Clone o repositório:**
 
    ```bash
    git clone git@github.com:cpwaldow/front-end-code-challenge-smartsite.git
