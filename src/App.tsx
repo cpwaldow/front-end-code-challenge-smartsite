@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Form from './components/Form';
 import Header from './components/Header';
 import IconsLegend from './components/IconsLegend';
@@ -10,6 +11,7 @@ function App() {
         <Form />
         <IconsLegend />
       </main>
+      <Footer />
     </>
   );
 }
