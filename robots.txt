@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /admin
+Disallow: /private
+Disallow: /internal
+Disallow: /restricted
+Disallow: /login
+Disallow: /logout
+Disallow: /reset-password
+Disallow: /register
+Disallow: /user-profile
+Disallow: /dashboard
+Disallow: /settings
+Disallow: /api
+Disallow: /static
+Disallow: /assets
+Disallow: /images
+Disallow: /scripts
+Disallow: /styles
+Disallow: /fonts
+Disallow: /vendor
+
+Allow: /src/
+
+Sitemap: https://www.example.com/sitemap.xml
