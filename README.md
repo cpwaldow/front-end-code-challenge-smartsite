@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+# Front-end Code Challenge Smart Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Smart Fit, por atuar no segmento de fitness, passou por várias mudanças na pandemia. Foi necessário desenvolver uma página para buscar unidades fechadas ou abertas para consulta e reserva.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Certifique-se de ter o seguinte instalado antes de começar:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalação
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clone o repositório:**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+   ```bash
+   git clone git@github.com:cpwaldow/front-end-code-challenge-smartsite.git
+
+## Navegue até o diretório do projeto
+
+ ```bash
+   cd front-end-code-challenge-smartsite
+  ```
+
+## Instale as dependências
+
+ ```bash
+   npm install
+  ```
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar os seguintes scripts:
+
+- dev: Inicia a aplicação no modo de desenvolvimento.
+- build: Compila o projeto para produção.
+- test: Executa os testes.
+
+Exemplo:
+
+```bash
+  npm run dev # para abrir a aplicação no navegador local
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚧 Estrutura do Projeto 🚧
+
+Esta aplicação não faz utilização de rotas e estados globais são compartilhados por meio de [ContextAPI](https://react.dev/learn/passing-data-deeply-with-context).
+
+```shell
+  .
+  ├── /src
+  │    └── /components
+  │    │     └── /components
+  │    │          ├── /Componente1
+  │    │          │    ├── index.tsx
+  │    │          │    └── componente1.css
+  │    │          └── /Componente2
+  │    │               ├── index.tsx
+  │    │               └── componente2.css
+  │    ├── App.tsx            
+  │    └── index.css            
+```
