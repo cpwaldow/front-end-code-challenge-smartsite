@@ -51,12 +51,15 @@ Esta aplicação não faz utilização de rotas e estados globais são compartil
   ├── /src
   │    └── /components
   │    │     └── /components
-  │    │          ├── /Componente1
+  │    │          ├── /assets
+  │    │          ├── /utils
+  │    │          └── /Componente1
   │    │          │    ├── index.tsx
   │    │          │    └── componente1.css
   │    │          └── /Componente2
   │    │               ├── index.tsx
   │    │               └── componente2.css
-  │    ├── App.tsx            
+  │    ├── /services
+  │    └── App.tsx            
   │    └── index.css            
 ```
