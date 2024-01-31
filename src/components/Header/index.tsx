@@ -1,4 +1,4 @@
-import logo from '../../assets/smartfit-logo.png';
+import logo from '../assets/smartfit-logo.png';
 import './header.css';
 
 const Header = () => {

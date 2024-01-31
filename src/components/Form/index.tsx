@@ -1,6 +1,6 @@
 import RadioInput from '../RadioInput';
 import periods from '../utils/period';
-import clock from '../../assets/clock.svg';
+import clock from '../assets/clock.svg';
 import './form.css';
 
 const Form = () => {
