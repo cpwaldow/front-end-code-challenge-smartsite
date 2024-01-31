@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --dark-grey: #333333;
-  --light-grey: #808080;
+  --light-grey: #e5e5e5;
   --yellow: #FFB612;
   --red: #dc0a17;
   --green: #2FC022;
@@ -20,7 +20,7 @@
 }
 
 .main__container {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
 }
 
