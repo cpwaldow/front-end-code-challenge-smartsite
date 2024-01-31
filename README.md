@@ -65,6 +65,7 @@ Esta aplicação não faz utilização de rotas e estados globais são compartil
   │    │               ├── index.tsx
   │    │               └── componente2.css
   │    ├── /services
+  │    ├── /context
   │    └── App.tsx            
   │    └── index.css            
 ```
