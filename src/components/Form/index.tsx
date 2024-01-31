@@ -5,7 +5,7 @@ import './form.css';
 
 const Form = () => {
   return (
-    <section className='main__container'>
+    <section>
       <form className='form--border'>
         <section className='form__container__time'>
           <img src={clock} alt='clock icon' className='form--icon' />
