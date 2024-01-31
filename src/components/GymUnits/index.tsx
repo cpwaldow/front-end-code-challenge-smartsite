@@ -1,4 +1,4 @@
-import fetchAPI from '../../services/fetch';
+// import fetchAPI from '../../services/fetch';
 
 const GymUnits = () => {
   // fetchAPI();
