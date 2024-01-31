@@ -1,7 +1,7 @@
 import fetchAPI from '../../services/fetch';
 
 const GymUnits = () => {
-  fetchAPI();
+  // fetchAPI();
   return <div>GymUnits</div>;
 };
 
