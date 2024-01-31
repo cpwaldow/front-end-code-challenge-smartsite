@@ -21,4 +21,4 @@ Disallow: /vendor
 
 Allow: /src/
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://front-end-code-challenge-smartsite-self.vercel.app/

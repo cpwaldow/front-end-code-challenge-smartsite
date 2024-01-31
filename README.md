@@ -35,12 +35,17 @@ No diretório do projeto, você pode executar os seguintes scripts:
 - dev: Inicia a aplicação no modo de desenvolvimento.
 - build: Compila o projeto para produção.
 - test: Executa os testes.
+- deploy: Executa o deploy em produção.
 
 Exemplo:
 
 ```bash
   npm run dev # para abrir a aplicação no navegador local
 ```
+
+## Deploy
+
+Este projeto está hospedado na [Vercel](https://vercel.com/) via CLI, ao executar o comando `npm run deploy` é feito o build do projeto e inicializa a disponibilização da nova versão em produção
 
 ## 🚧 Estrutura do Projeto 🚧
 
