@@ -1,5 +1,5 @@
 import './icons-legend.css';
-import outfit from '../utils/outfit';
+import { outfit } from '../utils/outfit';
 import OutfitItems from '../OutfitItems';
 
 const IconsLegend = () => {

@@ -1,22 +1,41 @@
 import { LocationsApiType } from '../../types';
+import { gymItems } from '../utils/outfit';
 import './gym-unit-info.css';
-// import requiredMask from '../assets/required-mask.png';
-// import recommendedMask from '../assets/recommended-mask.png';
-// import requiredTowel from '../assets/required-towel.png';
-// import recommendedTowel from '../assets/recommended-towel.png';
-// import parcialFountain from '../assets/partial-fountain.png';
-// import forbiddenFountain from '../assets/forbidden-fountain.png';
-// import requiredLockerroom from '../assets/required-lockerroom.png';
-// import partialLockerroom from '../assets/partial-lockerroom.png';
-// import forbiddenLockerroom from '../assets/forbidden-lockerroom.png';
 
 type GymUnitInfoProps = {
   info: LocationsApiType;
 };
 
+type FindItemImgType = {
+  findMask?: string | undefined;
+  findTowel?: string | undefined;
+  findFountain?: string | undefined;
+  findLockerRoom?: string | undefined;
+};
+
 const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
-  const { opened, title, content, schedules } = info;
-  console.log(info);
+  const {
+    opened,
+    title,
+    content,
+    schedules,
+    mask,
+    fountain,
+    towel,
+    locker_room,
+  } = info;
+
+  const findItem = (product: string, productObj: string) =>
+    gymItems.find(
+      (item) => item.item === product && item.obligatoriness === productObj,
+    )?.img;
+
+  const findItemImg: FindItemImgType = {
+    findMask: findItem('mask', mask),
+    findTowel: findItem('towel', towel),
+    findFountain: findItem('fountain', fountain),
+    findLockerRoom: findItem('locker_room', locker_room),
+  };
 
   const handleContentReplace = () => {
     const splitContent = content.split('<br>');
@@ -45,7 +64,15 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
         ))}
       {opened && (
         <section className='gym-unit-info__options'>
-          <p>images</p>
+          <section className='gym-unit-info__images__container'>
+            {Object.keys(findItemImg).map((item) => (
+              <img
+                src={`${findItemImg[item as keyof typeof findItemImg]}`}
+                style={{ width: 60 }}
+                key={findItemImg[item as keyof typeof findItemImg]}
+              />
+            ))}
+          </section>
           <section className='gym-unit-info__schedules'>
             {schedules.map((date, index) => (
               <div

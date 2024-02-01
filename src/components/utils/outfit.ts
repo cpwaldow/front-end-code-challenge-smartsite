@@ -16,7 +16,13 @@ type OutfitType = {
   }[];
 }[];
 
-const outfit: OutfitType = [
+type GymItemsType = {
+  item: string;
+  obligatoriness: string;
+  img: string;
+}[];
+
+export const outfit: OutfitType = [
   {
     item: 'Máscara',
     imgs: [
@@ -75,4 +81,50 @@ const outfit: OutfitType = [
   },
 ];
 
-export default outfit;
+export const gymItems: GymItemsType = [
+  {
+    item: 'mask',
+    obligatoriness: 'required',
+    img: requiredMask,
+  },
+  {
+    item: 'mask',
+    obligatoriness: 'recommended',
+    img: recommendedMask,
+  },
+  {
+    item: 'towel',
+    obligatoriness: 'required',
+    img: requiredTowel,
+  },
+  {
+    item: 'towel',
+    obligatoriness: 'recommended',
+    img: requiredTowel,
+  },
+  {
+    item: 'fountain',
+    obligatoriness: 'not_allowed',
+    img: forbiddenFountain,
+  },
+  {
+    item: 'fountain',
+    obligatoriness: 'partial',
+    img: parcialFountain,
+  },
+  {
+    item: 'locker_room',
+    obligatoriness: 'allowed',
+    img: requiredLockerroom,
+  },
+  {
+    item: 'locker_room',
+    obligatoriness: 'partial',
+    img: partialLockerroom,
+  },
+  {
+    item: 'locker_room',
+    obligatoriness: 'closed',
+    img: forbiddenLockerroom,
+  },
+];

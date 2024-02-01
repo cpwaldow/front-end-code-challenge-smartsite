@@ -3,6 +3,7 @@
   border-radius: 6px;
   padding: 1rem;
   min-width: 30%;
+  margin-bottom: 1rem;
 }
 
 .gym-unit-info__isOpen {
@@ -31,6 +32,10 @@
 .gym-unit-info__options {
   border-top: 1px solid var(--dark-grey);
   margin-top: 1rem;
+}
+
+.gym-unit-info__images__container {
+  margin-top: 1.5rem;
 }
 
 .gym-unit-info__schedules {
