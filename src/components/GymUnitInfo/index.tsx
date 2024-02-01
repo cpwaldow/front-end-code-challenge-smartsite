@@ -58,7 +58,7 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
       <h3 className='gym-unit-info__title'>{title}</h3>
       {content &&
         handleContentReplace().map((contentReplaced) => (
-          <p key={contentReplaced} className='gym-unit-info__location '>
+          <p key={contentReplaced} className='gym-unit-info__location'>
             {contentReplaced}
           </p>
         ))}

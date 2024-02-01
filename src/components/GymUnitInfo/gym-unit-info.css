@@ -27,6 +27,7 @@
 
 .gym-unit-info__location {
   color: var(--dark-grey);
+  width: 15rem;
 }
 
 .gym-unit-info__options {
@@ -36,6 +37,8 @@
 
 .gym-unit-info__images__container {
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .gym-unit-info__schedules {
