@@ -49,7 +49,7 @@ Este projeto está hospedado na [Vercel](https://vercel.com/) via CLI, ao execut
 
 ## 🚧 Estrutura do Projeto 🚧
 
-Esta aplicação não faz utilização de rotas e estados globais são compartilhados por meio de [ContextAPI](https://react.dev/learn/passing-data-deeply-with-context).
+Esta aplicação não faz utilização de rotas. Estados globais são compartilhados por meio de [ContextAPI](https://react.dev/learn/passing-data-deeply-with-context).
 
 ```shell
   .
@@ -66,6 +66,7 @@ Esta aplicação não faz utilização de rotas e estados globais são compartil
   │    │               └── componente2.css
   │    ├── /services
   │    ├── /context
+  │    ├── /tests
   │    └── App.tsx            
   │    └── index.css            
 ```
