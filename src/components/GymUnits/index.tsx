@@ -12,7 +12,6 @@ const GymUnits = () => {
   const { gyms }: GymUnitsType = useContext(GymContext);
   if (!gyms) return null;
   const { locations } = JSON.parse(JSON.stringify(gyms));
-  // console.log(locations);
   const initialGyms = [locations[0], locations[1], locations[2]];
   return (
     <div className='gym-units__container'>
