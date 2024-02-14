@@ -14,7 +14,8 @@ Certifique-se de ter o seguinte instalado antes de começar:
 **Clone o repositório:**
 
    ```bash
-   git clone git@github.com:cpwaldow/front-end-code-challenge-smartsite.git
+    git clone git@github.com:cpwaldow/front-end-code-challenge-smartsite.git
+   ```
 
 ## Navegue até o diretório do projeto
 
