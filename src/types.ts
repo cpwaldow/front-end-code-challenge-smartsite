@@ -11,6 +11,7 @@ export type LocationsApiType = {
     weekdays: string;
     hour: string;
   }[];
+  [key: string]: any;
 };
 
 export type GymAPIType = {
