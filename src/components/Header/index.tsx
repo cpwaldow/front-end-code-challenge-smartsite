@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <section className='header--background--black'>
-        <img src={logo} alt='SmartFit Logo' className='header__logo' />
+        <img src={logo} alt='Smart Fit Logo' className='header__logo' />
       </section>
       <section className='main__container'>
         <h1 className='header__title' data-testid='header-title'>
