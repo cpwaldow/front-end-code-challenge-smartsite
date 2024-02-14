@@ -18,7 +18,7 @@ describe('Header component tests', () => {
     expect(headerDescription).toHaveTextContent(headerDescriptionText);
   });
   it('Header should have logo in the document', () => {
-    const headerLogo = screen.getByAltText('SmartFit Logo');
+    const headerLogo = screen.getByAltText('Smart Fit Logo');
     expect(headerLogo).toBeInTheDocument();
   });
 });
