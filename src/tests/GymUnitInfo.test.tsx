@@ -55,6 +55,12 @@ describe('GymUnitInfo component test gym', () => {
     icons.forEach((item) => {
       expect(screen.getByAltText(item)).toBeInTheDocument();
     });
+    expect(screen.getByText('Seg. à Sex.')).toBeInTheDocument();
+    expect(screen.getByText('06h às 22h')).toBeInTheDocument();
+    expect(screen.getByText('Sáb.')).toBeInTheDocument();
+    expect(screen.getAllByText('Fechada')[0]).toBeInTheDocument();
+    expect(screen.getByText('Dom.')).toBeInTheDocument();
+    expect(screen.getAllByText('Fechada')[1]).toBeInTheDocument();
   });
 
   it('Render the correct info about Gym close', () => {
