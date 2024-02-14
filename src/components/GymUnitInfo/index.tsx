@@ -46,12 +46,24 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
     return [firstPlaceContent, lastPlaceContent];
   };
 
+  const handleAltImageText = (item: string) => {
+    const gymItem = item.split('find')[1].toLowerCase();
+    const gymItemObligatoriness = info[item.split('find')[1].toLowerCase()];
+
+    if (gymItem === 'lockerroom') {
+      return `${gymItem} - ${locker_room}`;
+    }
+
+    return `${gymItem} - ${gymItemObligatoriness}`;
+  };
+
   return (
     <div className='gym-unit-info__container'>
       <p
         className={`${
           opened ? 'gym-unit-info__isOpen' : 'gym-unit-info__isClosed'
         }`}
+        data-testid='isOpen-or-isClose'
       >
         {opened ? 'Aberto' : 'Fechado'}
       </p>
@@ -67,6 +79,7 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
           <section className='gym-unit-info__images__container'>
             {Object.keys(findItemImg).map((item) => (
               <img
+                alt={handleAltImageText(item)}
                 src={`${findItemImg[item as keyof typeof findItemImg]}`}
                 style={{ width: 60 }}
                 key={findItemImg[item as keyof typeof findItemImg]}
