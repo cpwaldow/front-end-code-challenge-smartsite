@@ -48,7 +48,7 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
 
   const handleAltImageText = (item: string) => {
     const gymItem = item.split('find')[1].toLowerCase();
-    const gymItemObligatoriness = info[item.split('find')[1].toLowerCase()];
+    const gymItemObligatoriness = info[gymItem];
 
     if (gymItem === 'lockerroom') {
       return `${gymItem} - ${locker_room}`;
