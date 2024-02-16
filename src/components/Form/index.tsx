@@ -26,9 +26,9 @@ const Form = () => {
         </section>
         <section className='form__container__btn'>
           <button className='form__btn btn__find__unit'>
-            encontrar unidade
+            ENCONTRAR UNIDADE
           </button>
-          <button className='form__btn btn__clear'>limpar</button>
+          <button className='form__btn btn__clear'>LIMPAR</button>
         </section>
       </form>
     </section>
