@@ -6,12 +6,13 @@ type PropsType = {
     startTime: string;
     endTime: string;
   };
+  setSelectedOption: (info: string) => void;
 };
 
-const RadioInput = ({ info }: PropsType) => {
+const RadioInput = ({ info, setSelectedOption }: PropsType) => {
   const { period, startTime, endTime } = info;
   return (
-    <div>
+    <div onClick={() => setSelectedOption(period)}>
       <label className='radio__label'>
         <section>
           <input type='radio' id={period} name='select-period' />

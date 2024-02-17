@@ -1,12 +1,8 @@
 import { useContext } from 'react';
 import GymContext from '../../context/GymContext';
-import { GymAPIType } from '../../types';
+import { GymUnitsType } from '../../types';
 import './gym-units.css';
 import GymUnitInfo from '../GymUnitInfo';
-
-type GymUnitsType = {
-  gyms?: GymAPIType;
-};
 
 const GymUnits = () => {
   const { gyms }: GymUnitsType = useContext(GymContext);

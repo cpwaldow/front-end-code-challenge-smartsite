@@ -5,6 +5,16 @@ import Header from './components/Header';
 import IconsLegend from './components/IconsLegend';
 
 function App() {
+  const getLocation = async () => {
+    const position = await new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+    console.log(position);
+
+    return position;
+  };
+  getLocation();
+
   return (
     <>
       <Header />
