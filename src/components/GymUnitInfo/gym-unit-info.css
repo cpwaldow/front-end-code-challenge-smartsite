@@ -23,6 +23,7 @@
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   margin-bottom: 1rem;
+  max-width: 11rem;
 }
 
 .gym-unit-info__location {
@@ -33,6 +34,7 @@
 .gym-unit-info__options {
   border-top: 1px solid var(--dark-grey);
   margin-top: 1rem;
+  max-width: 14rem;
 }
 
 .gym-unit-info__images__container {
