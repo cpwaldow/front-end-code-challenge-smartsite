@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { LocationsApiType } from '../../types';
 import { gymItems } from '../utils/outfit';
 import './gym-unit-info.css';
@@ -37,15 +38,6 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
     findLockerRoom: findItem('locker_room', locker_room),
   };
 
-  const handleContentReplace = () => {
-    const splitContent = content.split('<br>');
-    const firstPlaceContent = splitContent[0]
-      .replace('&#8211;', '-')
-      .replace('<p>', '');
-    const lastPlaceContent = splitContent[1].replace('</p>', '');
-    return [firstPlaceContent, lastPlaceContent];
-  };
-
   const handleAltImageText = (item: string) => {
     const gymItem = item.split('find')[1].toLowerCase();
     const gymItemObligatoriness = info[gymItem];
@@ -65,15 +57,18 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
         }`}
         data-testid='isOpen-or-isClose'
       >
-        {opened ? 'Aberto' : 'Fechado'}
+        {opened ? 'Aberto' : 'Fechado'}a
       </p>
-      <h3 className='gym-unit-info__title'>{title}</h3>
-      {content &&
-        handleContentReplace().map((contentReplaced) => (
-          <p key={contentReplaced} className='gym-unit-info__location'>
-            {contentReplaced}
-          </p>
-        ))}
+      <h3
+        className='gym-unit-info__title'
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(title) }}
+      ></h3>
+      {content && (
+        <p
+          className='gym-unit-info__location'
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
+        ></p>
+      )}
       {opened && (
         <section className='gym-unit-info__options'>
           <section className='gym-unit-info__images__container'>
