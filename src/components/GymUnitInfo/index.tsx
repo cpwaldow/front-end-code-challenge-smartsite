@@ -24,6 +24,9 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
     fountain,
     towel,
     locker_room,
+    street,
+    region,
+    uf,
   } = info;
 
   const findItem = (product: string, productObj: string) =>
@@ -57,7 +60,7 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
         }`}
         data-testid='isOpen-or-isClose'
       >
-        {opened ? 'Aberto' : 'Fechado'}a
+        {opened ? 'Aberto' : 'Fechado'}
       </p>
       <h3
         className='gym-unit-info__title'
@@ -68,6 +71,9 @@ const GymUnitInfo = ({ info }: GymUnitInfoProps) => {
           className='gym-unit-info__location'
           dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
         ></p>
+      )}
+      {street && (
+        <p className='gym-unit-info__location'>{`${street} - ${region}, ${uf}`}</p>
       )}
       {opened && (
         <section className='gym-unit-info__options'>
