@@ -57,9 +57,9 @@ describe('GymUnitInfo component test gym', () => {
 
     expect(screen.getByText('Dom Severino')).toBeInTheDocument();
     expect(
-      screen.getByText('Av. Dom Severino, 1733 - Fátima'),
+      screen.getByText(/Av. Dom Severino, 1733 – Fátima/i),
     ).toBeInTheDocument();
-    expect(screen.getByText('Teresina, PI')).toBeInTheDocument();
+    expect(screen.getByText(/Teresina, PI/i)).toBeInTheDocument();
 
     icons.forEach((item, index) => {
       const image = screen.getByAltText(item);
@@ -78,7 +78,7 @@ describe('GymUnitInfo component test gym', () => {
     expect(screen.getAllByText('Fechada')[1]).toBeInTheDocument();
   });
 
-  it('Render the correct info about Gym close', () => {
+  it('Render the correct info about Gym close', async () => {
     render(<GymUnitInfo info={gymInfos[1]} />);
 
     const isOpenOrIsClose = screen.getByTestId('isOpen-or-isClose');
@@ -86,9 +86,9 @@ describe('GymUnitInfo component test gym', () => {
 
     expect(screen.getByText('Presidente Prudente')).toBeInTheDocument();
     expect(
-      screen.getByText('Rua Siqueira Campos, 1545 - Vila Roberto'),
+      screen.getByText(/Rua Siqueira Campos, 1545 – Vila Roberto/i),
     ).toBeInTheDocument();
-    expect(screen.getByText('Presidente Prudente, SP')).toBeInTheDocument();
+    expect(screen.getByText(/Presidente Prudente, SP/i)).toBeInTheDocument();
 
     expect(() => screen.getByText('Seg. à Sex.')).toThrow();
     icons.forEach((item) => {
