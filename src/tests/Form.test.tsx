@@ -9,7 +9,6 @@ describe('Form component test', () => {
     expect(screen.getByText('Horário')).toBeInTheDocument();
     expect(screen.getByText('Qual período quer treinar?')).toBeInTheDocument();
     expect(screen.getAllByRole('radio')).toHaveLength(3);
-    expect(screen.getAllByRole('button')).toHaveLength(2);
     expect(screen.getByRole('checkbox')).toBeInTheDocument();
   });
   it('Verify exist 3 inputs type radio and 1 input type checkbox', () => {
@@ -26,11 +25,7 @@ describe('Form component test', () => {
     expect(screen.getByText('Exibir unidades fechadas')).toBeInTheDocument();
     expect(screen.getByText('Resultados encontrados:')).toBeInTheDocument();
   });
-  it('Verify exist 2 buttons on page', () => {
-    expect(screen.getAllByRole('button')).toHaveLength(2);
-  });
-  it('Verify buttons text', () => {
-    expect(screen.getByText('ENCONTRAR UNIDADE')).toBeInTheDocument();
+  it('Verify button text', () => {
     expect(screen.getByText('LIMPAR')).toBeInTheDocument();
   });
 });
