@@ -20,6 +20,7 @@ const GymProvider = ({ children }: GymProviderPropsType) => {
     <GymContext.Provider
       value={{
         gyms: gymData,
+        setGymData: setGymData,
       }}
     >
       {children}

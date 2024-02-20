@@ -1,9 +1,5 @@
 import { createContext } from 'react';
-import { GymAPIType } from '../types';
-
-type GymContextType = {
-  gyms: GymAPIType | undefined;
-};
+import { GymContextType } from '../types';
 
 const GymContext = createContext({} as GymContextType);
 

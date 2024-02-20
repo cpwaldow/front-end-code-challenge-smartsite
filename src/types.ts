@@ -19,6 +19,11 @@ export type SchedulesLocationsType = {
   hour: string;
 }[];
 
+export type GymContextType = {
+  gyms: GymAPIType | undefined;
+  setGymData: React.Dispatch<React.SetStateAction<GymAPIType | undefined>>;
+};
+
 export type GymUnitsType = {
   gyms?: GymAPIType;
 };

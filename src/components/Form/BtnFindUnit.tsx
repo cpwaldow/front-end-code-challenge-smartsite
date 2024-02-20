@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import GymContext from '../../context/GymContext';
 import {
-  GymUnitsType,
+  GymContextType,
   SchedulesLocationsType,
   LocationsApiType,
   BtnFindUnitType,
@@ -25,7 +25,7 @@ const periodHors: PeriodHoursType = {
 };
 
 const BtnFindUnit = ({ period }: BtnFindUnitType) => {
-  const { gyms }: GymUnitsType = useContext(GymContext);
+  const { gyms, setGymData }: GymContextType = useContext(GymContext);
   if (!gyms) return null;
 
   const handleSchedule = (schedule: SchedulesLocationsType) =>
@@ -59,7 +59,14 @@ const BtnFindUnit = ({ period }: BtnFindUnitType) => {
           ),
         ),
     );
-    // console.log(filterGymOpenByPeriod);
+
+    const filterGyms = gyms.locations.filter((gym: LocationsApiType) =>
+      filterGymOpenByPeriod.find(
+        (item: HandleLocationOpenedType) => gym.id === item.id,
+      ),
+    );
+
+    setGymData({ ...gyms, locations: filterGyms });
   };
 
   return (
