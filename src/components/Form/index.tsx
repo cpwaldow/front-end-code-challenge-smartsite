@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import RadioInput from '../RadioInput';
 import periods from '../utils/period';
 import clock from '../assets/clock.svg';
 import './form.css';
 import BtnFindUnit from './BtnFindUnit';
+import GymContext from '../../context/GymContext';
 
 const Form = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');
+  const { gyms } = useContext(GymContext);
 
   return (
     <section>
@@ -30,7 +32,7 @@ const Form = () => {
             Exibir unidades fechadas
           </label>
           <p>
-            Resultados encontrados: <b>0</b>
+            Resultados encontrados: <b>{gyms?.locations.length}</b>
           </p>
         </section>
         <section className='form__container__btn'>
