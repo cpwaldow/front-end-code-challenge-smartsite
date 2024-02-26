@@ -52,7 +52,8 @@
 .gym-unit-info__schedules__weekdays {
   flex: 50%;
   margin-bottom: 1rem;
-  & h4 {
-    font-size: 1.3rem;
-  }
+}
+
+.gym-unit-info__schedules__weekday > h4 {
+  font-size: 1.3rem;
 }
