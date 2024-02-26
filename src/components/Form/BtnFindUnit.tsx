@@ -26,7 +26,7 @@ const periodHors: PeriodHoursType = {
 
 const BtnFindUnit = ({ period }: BtnFindUnitType) => {
   const { gyms, setGymData }: GymContextType = useContext(GymContext);
-  if (!gyms) return null;
+  // if (!gyms) return null;
 
   const handleSchedule = (schedule: SchedulesLocationsType) =>
     schedule
@@ -36,7 +36,7 @@ const BtnFindUnit = ({ period }: BtnFindUnitType) => {
       );
 
   const handleLocationOpened = () =>
-    gyms.locations
+    gyms?.locations
       .filter((item: LocationsApiType) => item.opened)
       .map((item: LocationsApiType) => ({
         id: item.id,
@@ -60,13 +60,13 @@ const BtnFindUnit = ({ period }: BtnFindUnitType) => {
         ),
     );
 
-    const filterGyms = gyms.locations.filter((gym: LocationsApiType) =>
+    const filterGyms = gyms?.locations.filter((gym: LocationsApiType) =>
       filterGymOpenByPeriod.find(
         (item: HandleLocationOpenedType) => gym.id === item.id,
       ),
     );
 
-    setGymData({ ...gyms, locations: filterGyms });
+    gyms ? setGymData({ ...gyms, locations: filterGyms }) : undefined;
   };
 
   return (
